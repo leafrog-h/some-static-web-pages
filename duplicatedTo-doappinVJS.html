@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        button {
+            cursor: pointer;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 15vh;
+            font-size: 20px;
+            color: #fff;
+            background: #333;
+        }
+        .divform p {
+            height: 6vh;
+            width: 100%;
+            border:none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        .divform input {
+            margin-top: 10px;
+            display: inline-block;
+            height: 30px;
+            font-size: 20px;
+        }
+        .pform label {
+            margin-right: 10px;
+            margin-left: 30px;
+        }
+        
+        .pform button {
+            display: inline-block;
+            margin-left: 10px;
+            color: purple;
+            background-color: black;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        .todoitem {
+            display: flex;
+            height:12vh;
+            background-color: orange;
+            border-bottom: 1px white dashed;
+        }
+        .todoitem p {
+            padding-top: 5vh;
+            font-size: 22px;
+        }
+        .todoitem p input {
+            margin-left: 20px;
+        }
+        .todoitem p label {
+            margin-left: 10px;
+        }
+        .todoitem button {
+            display: inline-block;
+            right: 20px;
+            font-size: 20px;
+            position: fixed;
+            background-color: #222;
+            color: white;
+            border: none;
+            width: 70px;
+            border-radius: 5%;
+        }
+        .todoitem input:checked ~ label {
+            text-decoration: line-through;
+        }
+        .deleteall {
+            display: block;
+            margin: 20px auto;
+            font-size: 20px;
+            background-color: red;
+            color: black;
+            border-radius: 10px;
+            width: 104px;
+        }
+
+
+    </style>
+</head>
+<script defer>
+    const visibleText = document.getElementById('submittext'),
+          hiddenText = document.getElementById('textinput'),
+          MYTodos = [
+      {
+        task: 'do pull-ups',
+        shouldDelete: false
+      },
+      {
+        task: 'jog in the morning',
+        shouldDelete: false
+      },
+      {
+        task: 'walk several kilometers\' length ',
+        shouldDelete: false,
+      }
+    ],
+
+          
+</script>
+<body>
+    <header id='myheader' >
+        <h2>
+            A SPA for My To-do list
+        </h2>
+    </header>
+    <main>
+        <div class="divform" >
+            <form action="" id="submitform">
+            <p class="pform">
+            <label for="textinput">
+                Add your To-do plans to the list below:
+            </label>
+            <input type="text" id='submittext' placeholder="Add your to-do stuffs here" size="80" required />
+            <input type="text" id='textinput' style="display: none" />
+            <button type="submit" id='submit-btn'>Submit</button>
+            </p>
+            </form>
+        </div>
+        <div id="showcasearea">
+            <div class="todoitem">
+                <p>
+                    <input type="checkbox" value="do pull-ups" />
+                    <label>do pull-ups</label>
+                    <button>Delete</button>
+                </p>
+            </div>
+            <div class="todoitem">
+                    <p>
+                        <input type="checkbox" value="jog in the morning" />
+                        <label>jog in the morning</label>
+                        <button>Delete</button>
+                    </p>
+            </div>            
+            <div class="todoitem">
+                    <p>
+                            <input type="checkbox" value="walk many places" />
+                            <label>walk many places</label>
+                            <button>Delete</button>
+                    </p>
+            </div>
+        </div>
+        <div >
+            <button class="deleteall">Delete All</button>
+        </div>
+    </main>
+</body>
+</html>

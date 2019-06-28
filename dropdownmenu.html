@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }     
+        body {
+            height: 100vh;
+            background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+        }   
+        nav .dropdown {
+            display: flex;
+            height: 10vh;
+            align-items: center;
+            justify-content: space-around;
+            background-color: lightskyblue; 
+        }
+        .receipediv, .infodiv {
+            position: relative;
+        }
+        nav ul {
+         position: absolute;
+         margin-top: 10px;
+         list-style: none;
+         width: 120px;
+         border: 2px #66ee44 solid;
+         opacity: 0;
+         transition: togglediv 1s ease;
+        }
+        @keyframes togglediv {
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.75;
+            }
+        }
+        li {
+            background-color: blanchedalmond;
+            width: 100%;
+            padding: 10px;
+            font-size: 18px;
+            border-bottom: 1px #fff solid;
+        }
+        li:hover {
+            background: red;
+        }
+        a {
+            color:black;
+            text-decoration: none
+        }
+        span {
+            cursor: pointer;
+            pointer-events: all;
+            display: block;
+            padding: 8px;
+            background: #66ee44;
+            border-radius: 5px;
+            text-shadow: 5px 10px #fe23;
+        }
+        span>a {
+            color: violet;
+            pointer-events: all;
+        }
+        .titlediv span:focus + ul {
+            opacity: 0.9 ;
+            pointer-events: all;
+        }
+        .titlediv {
+            pointer-events: all;
+        }
+        .titlediv:focus {
+            background: black;
+        }
+        .visible {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="dropdown">
+        <div class="homediv">
+            <div class="titlediv" >
+            <span><a href="#">Home</a></span>
+            </div>
+        </div>
+        <div class="receipediv">
+            <div class='titlediv' ><span id="btn1" ><a href="#" id='a-btn1'>Receipe</a></span></div>
+            <ul class="receipelist">
+                <li><a href="#">Bear claw</a></li>
+                <li><a href="#">Dog bone</a></li>
+                <li><a href="#">Steamed bun</a></li>
+                <li><a href="#">Toasted frog</a></li>
+            </ul>
+        </div>
+        <div class="infodiv">
+                <div class="titlediv" ><span id="btn2"><a href="#" id="a-btn2" >About us</a></span></div>
+                <ul class="infolist">
+                    <li><a href="#">Address</a></li>
+                    <li><a href="#">Telephone</a></li>
+                    <li><a href="#">E-mail</a></li>
+                    <li><a href="#">Parent company site</a></li>
+                </ul>
+            </div>
+            </div>
+        </nav>
+    <script>
+        /* 
+        let spanBtn1 = document.querySelectorAll('span')[0],
+            spanBtn2 = document.querySelectorAll('span')[1],
+            receipeList = document.querySelector('.receipelist'),
+            infoList = document.querySelector('.infolist');
+        document.addEventListener('click', handleClick, true);
+        function handleClick(e) {
+            let targetName = e.target.tagName,
+                targetId = e.target.id;
+                
+            console.log(targetName);
+            switch(targetId) {
+                case 'btn1':
+                receipeList.classList.toggle('visible');
+                break;
+                case 'a-btn1': 
+                receipeList.classList.toggle('visible');
+                break;
+                case 'a-btn2': 
+                infoList.classList.toggle('visible');
+                break;
+                case 'btn2':
+                infoList.classList.toggle('visible');
+                break;
+                default: 
+                receipeList.classList.remove('visible');
+                infoList.classList.remove('visible');
+            }
+        }
+        */ 
+    </script>
+</body>
+</html>

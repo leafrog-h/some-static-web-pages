@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            height: 20vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            font-size: 30px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        section {
+            float: left;
+            width: 33%;
+            height: 60vh;
+            margin: 0 2px;
+            border: 2px blueviolet solid;
+        }
+        h2 {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            border-bottom: 2px red dashed;
+            
+        }
+        section div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            text-align: center;
+            border-bottom: 2px yellow solid;
+        }
+        div * {
+            margin-right: 10px;
+        }
+        div:last-child {
+            border:none;
+        }
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            font-weight:bold;
+            font-size: 15px;
+            background-color: #222;
+            color: purple;
+            border-radius: 5px;
+            border: none;
+            text-shadow: #fff 1px 1px;
+            cursor: pointer;
+        }
+        @media (max-width: 578px) {
+            section {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>A Price Menu for Purchases.</h1>
+    </header>
+    <section class="section1 " >
+        <h2>Price for cars</h2>
+        <div>
+            <input type="checkbox" >
+            <label ><strong>$9870</strong> for BeiJIng Contempory</label>
+        </div>
+        <div>
+            <input type="checkbox" >
+            <label ><strong>$9980</strong>for Toyota</label>
+        </div>
+        <div>
+            <input type="checkbox"  id=""> 
+            <label ><strong>$7899</strong>for Benz</label>
+        </div>
+        <div>
+            <input type="checkbox" >
+            <label ><strong>$100</strong>for Three-Paddled Wheel</label>
+        </div>
+        <div>
+        <button>BUY</button>
+        </div>
+
+    </section>
+    <section class="section2 " >
+            <h2>Price for Smartphones</h2>
+            <div>
+                <input type="checkbox" >
+                <label ><strong>$2000</strong>for IPhoneX Max</label>
+            </div>
+            <div>
+                <input type="checkbox" >
+                <label ><strong>$800</strong>for HuaWei Mate20 Pro</label>
+            </div>
+            <div>
+                <input type="checkbox"  id=""> 
+                <label ><strong>$500</strong>for XiaoMi7</label>
+            </div>
+            <div>
+                <input type="checkbox" >
+                <label ><strong>$100</strong>for SamSung Galxy4</label>
+            </div>
+            <div>
+            <button>BUY</button>
+            </div>
+        </section>
+        <section class="section1 " >
+                <h2>Price for Video Games</h2>
+                <div>
+                    <input type="checkbox" >
+                    <label ><strong>$60</strong> Tomb Raider</label>
+                </div>
+                <div>
+                    <input type="checkbox" >
+                    <label ><strong>$40</strong>for GTA5</label>
+                </div>
+                <div>
+                    <input type="checkbox"  id=""> 
+                    <label ><strong>$55</strong>for Crackdown3</label>
+                </div>
+                <div>
+                    <input type="checkbox" >
+                    <label ><strong>0</strong>for Apex</label>
+                </div>
+                <div>
+                <button>BUY</button>
+                </div>
+
+            </section>
+</body>
+</html>
