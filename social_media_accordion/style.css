@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.menu {
+  width: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.item {
+  border-top: 1px solid #2080b9;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  padding: 16px 20px;
+  background: #3498db;
+  color: white;
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 20px;
+  bottom: -5px;
+  background-color: #3498db;
+  transform: rotate(45deg);
+}
+
+.item:target > .submenu {
+  display: block;
+}
+.btn i {
+  margin-right: 10px;
+}
+
+.submenu {
+  background-color: #333;
+  overflow: hidden;
+  transition: display 0.5s ease;
+  display: none;
+}
+
+.submenu a {
+  display: block;
+  padding: 16px 26px;
+  color: white;
+  margin: 4px 0;
+  position: relative;
+}
+
+.submenu a::before {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #3498db;
+  transition: opacity 0.4s linear;
+  opacity: 0;
+}
+
+.submenu a:hover::before {
+  opacity: 0.9;
+}
